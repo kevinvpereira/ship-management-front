@@ -1,0 +1,7 @@
+<ng-container *ngIf="loadingService.loading$ | async as loading">
+  <div
+    class="top-0 fixed flex items-center justify-center h-full w-full bg-black bg-opacity-50"
+  >
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-container>

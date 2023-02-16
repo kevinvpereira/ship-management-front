@@ -1,0 +1,46 @@
+<section class="flex flex-col gap-4 mx-4 md:mx-20 my-8">
+  <h2 class="text-xxl font-bold">{{ isNew ? "Add Ship" : "Edit Ship" }}</h2>
+
+  <mat-divider class="bg-primary-600 border-t-2"></mat-divider>
+
+  <form
+    [formGroup]="form"
+    class="grid sm:grid-cols-3 gap-4 form"
+    (ngSubmit)="save()"
+  >
+    <mat-form-field appearance="outline" class="col-span-full">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error>Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Code</mat-label>
+      <input
+        matInput
+        formControlName="code"
+        mask="SSSS-0000-S0"
+        [dropSpecialCharacters]="false"
+        placeholder="AAAA-1111-A1"
+      />
+      <mat-error>Code must follow the format: AAAA-1111-A1</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Length (meters)</mat-label>
+      <input matInput type="number" formControlName="length" />
+      <mat-error>Length must be greater than 5 and less than 600</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Width (meters)</mat-label>
+      <input matInput type="number" formControlName="width" />
+      <mat-error>Width must be greater than 1 and less than 100</mat-error>
+    </mat-form-field>
+
+    <div class="col-span-full flex justify-end gap-4">
+      <a class="btn btn--gray" routerLink="../">Return</a>
+      <button class="btn btn--primary">Save</button>
+    </div>
+  </form>
+</section>

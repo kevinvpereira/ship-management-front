@@ -1,0 +1,61 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr,
+fieldset,
+legend {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+li > {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+*:disabled {
+  cursor: not-allowed !important;
+  user-select: none;
+}
+
+* {
+  outline: none;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}

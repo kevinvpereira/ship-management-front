@@ -1,0 +1,60 @@
+.btn {
+  @apply rounded font-medium text-md tracking-wider p-3 px-4 transition-all duration-200 ease-in-out uppercase;
+
+  &:hover {
+    @apply -translate-y-0.5;
+  }
+
+  &--primary {
+    @apply bg-primary text-white #{!important};
+
+    &:hover {
+      @apply bg-primary-600 #{!important};
+    }
+  }
+
+  &--gray {
+    @apply bg-gray-200 text-primary-600 #{!important};
+
+    &:hover {
+      @apply bg-gray-300 #{!important};
+    }
+  }
+
+  &--secondary {
+    @apply bg-secondary-200 text-primary #{!important};
+
+    &:hover {
+      @apply bg-secondary-400 #{!important};
+    }
+  }
+
+  &--warning {
+    @apply bg-status-warning text-white opacity-80 #{!important};
+
+    &:hover {
+      @apply opacity-100 #{!important};
+    }
+  }
+
+  &--success {
+    @apply bg-status-success text-white opacity-80 #{!important};
+
+    &:hover {
+      @apply opacity-100 #{!important};
+    }
+  }
+
+  &--danger {
+    @apply bg-status-error text-white opacity-80 #{!important};
+
+    &:hover {
+      @apply opacity-100 #{!important};
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

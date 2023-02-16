@@ -1,27 +1,93 @@
-# ShipManagementFront
+<p align="center">
+  <h3 align="center">Ship CRUD Frontend</h3>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#run-locally">Locally</a></li>
+        <li><a href="#docker">Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This is the front of the Ship Management Project, which includes all CRUD operations. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Built With
 
-## Build
+The website is built using the following technologies: 
+* [Angular](https://angular.io)
+* [Tailwind CSS](https://tailwindcss.com/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+<!-- GETTING STARTED -->
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To make this project work locally, please follow the instructions below. Also, this project supports Docker, so if you desire to use it, please follow the instructions in the Docker section. 
 
-## Running end-to-end tests
+Before starting, please clone the repository: 
+   ```sh
+   git clone https://github.com/kevinvpereira/ship-management-front.git
+   ```
+Also, please follow the instructions for the backend project, otherwise, it won't work as expected: https://github.com/kevinvpereira/ship-management-backend
+   
+### Run locally
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Pre-requisites
 
-## Further help
+This is a list of software or packages you must have to run the project.
+* npm
+  ```sh
+  npm install npm@latest -g
+* node
+  ```sh
+  https://nodejs.org/en/download/
+* angular
+  ```sh
+  npm install -g @angular/cli
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Once you have all the necessary dependencies, you can move to the instructions.
+
+#### Instructions
+1. Install the node modules in the project folder
+   ```sh
+   npm install
+   ```
+2. Run the code
+   ```sh
+   ng serve --open
+   ```
+3. If everything worked as expected, you can test the application at http://localhost:4200
+
+### Docker
+
+1. Create the image
+   ```sh
+   docker build -t ship-management-front:dev .
+   ```
+2. Create the container
+   ```sh
+   docker run --name ship-management-front-container -d -p 8888:80 ship-management-front:dev
+   ``` 
+3. If everything worked as expected, you can test the application at http://localhost:8888
+
+<!-- CONTACT -->
+## Contact
+
+Kevin Pereira -[@kevinvpereira](https://www.linkedin.com/in/kevinvpereira/)

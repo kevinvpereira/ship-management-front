@@ -1,0 +1,16 @@
+html {
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent;
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 bg-slate-400;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-600 bg-opacity-90;
+  }
+}

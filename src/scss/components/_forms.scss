@@ -1,0 +1,31 @@
+.form {
+  .mat-form-field-label {
+    @apply text-primary-600;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::before,
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    @apply bg-primary;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    @apply bg-white;
+  }
+
+  .mdc-notched-outline__notch {
+    border-right: none !important;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+    --tw-ring-shadow: 0 0 #000 !important;
+  }
+}

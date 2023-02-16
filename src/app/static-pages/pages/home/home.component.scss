@@ -1,0 +1,5 @@
+.ship {
+    @apply h-screen w-screen bg-center bg-cover flex items-center justify-center;
+
+    background-image: linear-gradient(to bottom, rgba(8, 0, 94, 0.62), rgba(0, 74, 101, 0.93)), url(../../../../assets/images/ship.jpg);
+}

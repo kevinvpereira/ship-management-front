@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-4 p-4">
+  <h1 mat-dialog-title class="text-center text-xl font-bold">
+    Delete {{ data.name }}
+  </h1>
+  <div mat-dialog-content class="pb-0 text-center">
+    <p>Are you sure you want to delete {{ data.name }}?</p>
+  </div>
+  <div mat-dialog-actions class="flex justify-between">
+    <button class="btn btn--gray" [mat-dialog-close]="false">Cancel</button>
+    <button class="btn btn--danger" [mat-dialog-close]="true">Confirm</button>
+  </div>
+</div>

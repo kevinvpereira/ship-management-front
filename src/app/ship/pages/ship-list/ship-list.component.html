@@ -1,0 +1,17 @@
+<section class="flex flex-col gap-4 mx-4 md:mx-20 my-8">
+  <div class="flex justify-between items-center">
+    <h2 class="text-xxl font-bold">Ships</h2>
+    <a class="btn btn--primary" routerLink="new">Add Ship</a>
+  </div>
+
+  <mat-divider class="bg-primary-600 border-t-2"></mat-divider>
+
+  <app-ship-filters (filterChange)="search($event)"></app-ship-filters>
+  <ng-container *ngIf="datasource$ | async as datasource">
+    <app-ship-table
+      [datasource]="datasource"
+      (pageChange)="changePage($event)"
+      (removeChange)="remove($event)"
+    ></app-ship-table>
+  </ng-container>
+</section>
